@@ -1,0 +1,11 @@
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\bin\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.deps.json
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\bin\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.runtimeconfig.json
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\bin\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.runtimeconfig.dev.json
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\bin\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.dll
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.csprojResolveAssemblyReference.cache
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.csproj.CoreCompileInputs.cache
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.AssemblyInfoInputs.cache
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.AssemblyInfo.cs
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\bin\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.pdb
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.dll
+c:\users\totaw\source\repos\INMETRO.REGOIAS\INMETRO.REGOIAS.WEB\obj\Debug\netcoreapp2.0\INMETRO.REGOIAS.WEB.pdb
