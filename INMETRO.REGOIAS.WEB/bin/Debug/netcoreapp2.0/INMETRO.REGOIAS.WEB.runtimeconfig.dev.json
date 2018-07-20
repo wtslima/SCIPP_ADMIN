@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\totaw\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\totaw\\.nuget\\packages",
+      "C:\\Users\\wslima\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\wslima\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

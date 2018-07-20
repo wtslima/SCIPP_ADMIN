@@ -19,7 +19,7 @@ namespace INMETRO.REGOIAS.WEB.DADOS
             builder.Property(t => t.CodigoOIA)
                 .IsRequired()
                 .HasColumnType("String")
-                .HasColumnName("CDA_CODIGO_OIA");
+                .HasColumnName("CDA_CODIGO_OIA_PP");
            builder.Property(o => o.Nome)
                 .HasColumnName("NOM_ORGANISMO")
                 .IsRequired();

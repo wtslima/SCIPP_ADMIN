@@ -7,16 +7,17 @@ namespace INMETRO.REGOIAS.WEB.Models
     public class IntegracaoOrganismo
     {
         [Key]
-        [Column("IDT_INTEGRACAO_INFO")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("IDT_INTEGRACAO")]
         public int Id { get; set; }
 
-        //[ForeignKey("Organismo")]
-        //[Required]
-        //[Column("IDT_ORGANISMO")]
-        //public int OrganismoId { get; set; }
+        [ForeignKey("Organismo")]
+        [Required]
+        [Column("IDT_ORGANISMO")]
+        public int OrganismoId { get; set; }
 
         [Required]
-        [Column("DES_DIRETORIO_CIPP")]  //Inspecao
+        [Column("DES_DIRETORIO_REMOTO")]  //Inspecao
         public string DiretorioInspecao { get; set; }
 
         [Required]
@@ -24,14 +25,14 @@ namespace INMETRO.REGOIAS.WEB.Models
         public int TipoIntegracao { get; set; }
 
         [Required]
-        [Column("DES_DIRETORIO_LOCAL_CIPP")]  //c:\Inspecao\NomeOraganismo
+        [Column("DES_DIRETORIO_LOCAL")]  //c:\Inspecao\NomeOraganismo
         public string DiretorioInspecaoLocal { get; set; }
 
         [Required]
         [Column("DES_HOST_URI")]  //ftp:///siteftp
         public string HostURI { get; set; }
 
-        [Column("DES_PORTA")]
+        [Column("CDN_PORTA")]
         public string Porta { get; set; }
 
         [Required]
@@ -45,7 +46,7 @@ namespace INMETRO.REGOIAS.WEB.Models
         [Column("CDA_PRIVATE_KEY")]
         public string PrivateKey { get; set; }
 
-        //public virtual Organismo Organismo { get; set; }
+        public virtual Organismo Organismo { get; set; }
 
         public IntegracaoOrganismo()
         {

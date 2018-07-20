@@ -25,7 +25,18 @@ namespace INMETRO.REGOIAS.WEB.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var integracao = new IntegracaoOrganismo();
+            //integracao.DiretorioInspecao = "INSPECOES";
+
+            var organismos = _contexto.Organismos.OrderBy(o => o.Id).ToList(); 
+
+            organismos.Insert(0, new Organismo()
+            {
+                Id = 0,
+                CodigoOIA  = "Selecione	o CÓDIGO-OIA"
+            });
+            ViewBag.Organismos = organismos;
+            return View(integracao);
         }
 
         [HttpPost]
@@ -34,19 +45,69 @@ namespace INMETRO.REGOIAS.WEB.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
+               
+                    if (integracaoInfo.OrganismoId> 0)
+                    {
+                        var codigo_oia =  _contexto.Organismos.FirstOrDefault(s => s.Id == integracaoInfo.OrganismoId).CodigoOIA;
+                        integracaoInfo.DiretorioInspecaoLocal = codigo_oia;
+
+                    }
+
+                    integracaoInfo.DiretorioInspecao = "INSPECOES";
+                    integracaoInfo.Porta = integracaoInfo.TipoIntegracao == 1 ? "21" : "22";
                     _contexto.Add(integracaoInfo);
                     await _contexto.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
-                }
+                
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException e)
             {
                 ModelState.AddModelError("", "Não foi possível inserir os dados.");
                 throw;
             }
             return View(integracaoInfo);
+        }
+
+        public async Task<IActionResult> Edit(long? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var integracao = await _contexto.Integracao.SingleOrDefaultAsync(m => m.Id == id);
+            if (integracao == null)
+            {
+                return NotFound();
+            }
+            return View(integracao);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(IntegracaoOrganismo integracao)
+        {
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _contexto.Update(integracao);
+                    await _contexto.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    //if (!DepartamentoExists(departamento.DepartamentoID))
+                    //{
+                    //    return NotFound();
+                    //}
+                    //else
+                    //{
+                    //    throw;
+                    //}
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(integracao);
         }
     }
 }

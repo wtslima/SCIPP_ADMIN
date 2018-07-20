@@ -19,7 +19,7 @@ namespace INMETRO.REGOIAS.WEB.Models
         public string Nome { get; set; }
 
         [Required]
-        [Column("CDA_CODIGO_OIA")]
+        [Column("CDA_CODIGO_OIA_PP")]
         public string CodigoOIA { get; set; }
 
         [Column("CDA_ATIVO")]

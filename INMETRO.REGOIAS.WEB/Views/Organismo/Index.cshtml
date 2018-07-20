@@ -1,4 +1,4 @@
-﻿@model IEnumerable<INMETRO.REGOIAS.WEB.Models.Organismo>
+﻿@model IEnumerable<Organismo>
 
 @{
     Layout = null;
@@ -27,10 +27,9 @@
                 <th>
                     ATIVO
                 </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.IntegracaoInfo)
-            </th>*@
-            <th></th>
+            <th>
+               AÇÕES
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -45,9 +44,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EhAtivo)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.IntegracaoInfo.DiretorioInspecao)
-            </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

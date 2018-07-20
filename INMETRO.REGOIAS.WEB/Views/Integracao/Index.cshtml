@@ -1,4 +1,4 @@
-﻿@model IEnumerable<INMETRO.REGOIAS.WEB.Models.IntegracaoOrganismo>
+﻿@model IEnumerable<IntegracaoOrganismo>
 
 @{
     Layout = null;
@@ -13,34 +13,34 @@
 </head>
 <body>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar Nova Intergração</a>
 </p>
 <table class="table">
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.DiretorioInspecao)
+                   Diretório Organismo
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.TipoIntegracao)
+                    Tipo de integração
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DiretorioInspecaoLocal)
+                   Diretório Local
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.HostURI)
+                   URL Organismo
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Porta)
+                   Porta
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Usuario)
+                    Usuário
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Senha)
+                   Senha
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.PrivateKey)
+                   Private Key
                 </th>
             <th></th>
         </tr>
@@ -67,7 +67,7 @@
                 @Html.DisplayFor(modelItem => item.Usuario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Senha)
+                @Html.Raw("\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PrivateKey)
